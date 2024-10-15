@@ -1,1 +1,0 @@
-# Joshua-Cordial-The-Programmer
