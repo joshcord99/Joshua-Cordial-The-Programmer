@@ -1,30 +1,58 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="App">
+      <div>
+        <nav className="navbar">
+          <ul className="navbar-nav">
+
+          <li className="nav-item name">
+              <a href="#name" className="nav-link name">Joshua Cordial</a>
+            </li>
+            <li className="nav-item">
+              <a href="#about-me" className="nav-link">About Me</a>
+            </li>
+            <li className="nav-item">
+              <a href="#portfolio" className="nav-link">Portfolio</a>
+            </li>
+            <li className="nav-item">
+              <a href="#contact" className="nav-link">Contact</a>
+            </li>
+            <li className="nav-item">
+              <a href="#resume" className="nav-link">Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      {/* <div>
+      <h1 className='name'>Joshua Cordial</h1>
+      </div> */}
+      <div><h2 className='topic'>About Me</h2></div>
       <div>
         <a href="https://github.com/joshcord99" target="_blank">
-        <img src="/AvatarMaker-2.png" className="avatarImage" alt="Avatar"/>
+          <img src="/AvatarMaker-2.png" className="avatarImage" alt="Avatar"/>
         </a>
       </div>
-      <h1>Joshua Cordial</h1>
       <div className="card">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias sit eos illo ratione quia culpa ut, architecto repudiandae pariatur incidunt, aperiam ducimus, aut esse dicta perferendis! Labore, laboriosam omnis.
         </p>
+        <div className="card">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati praesentium cum et! Corporis incidunt ea commodi ipsam saepe excepturi nisi voluptate quae, explicabo reiciendis nam. Ipsa adipisci sed illo distinctio
         </p>
+        </div>
       </div>
+
       <footer>
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quos non aliquid velit facere necessitatibus laborum expedita, eius eligendi alias laboriosam provident nesciunt ipsum fuga? Voluptatem hic est velit delectus!
+        This is the footer
       </footer>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
