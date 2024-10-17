@@ -1,0 +1,35 @@
+.parentCard {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    /* background-color: yellow; */
+    padding: 5px;
+    border: 20px solid black;
+}
+
+
+
+
+
+.portfolioHead {
+    text-decoration: underline;
+}
+
+.readMeImage {
+    height: 250px;
+    width: 250px;
+}
+
+.VehicleBuilderImage {
+    height: 250px;
+    width: 250px;
+}
+
+.GameWorldImage {
+    height: 250px;
+    width: 250px;
+}
