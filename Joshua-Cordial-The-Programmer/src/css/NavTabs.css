@@ -1,0 +1,7 @@
+.nav-tabs {
+    background-image: url('/starry.gif'); /* Background image */
+    background-size: cover; /* Adjust size to cover */
+    background-position: center; /* Center the image */
+    padding: 10px; /* Padding around the nav items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
