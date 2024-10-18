@@ -1,7 +1,26 @@
 .nav-tabs {
-    background-image: url('/starry.gif'); /* Background image */
+    /* background-image: url('/sunface.gif');  */
+    /* background-color: rgb(248, 239, 4); */
     background-size: cover; /* Adjust size to cover */
     background-position: center; /* Center the image */
-    padding: 10px; /* Padding around the nav items */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    padding: 10px;
+    box-shadow: 0 opx 0px rgba(0, 0, 0, 0.1); 
+    border:  none;
+}
+
+a.nav-link{
+    color: orange;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+a.nav-link.active{
+    color: orange;
+    font-weight:bold;
+    text-decoration: underline;
+}
+  
+
+a.nav-link:hover{
+    color: white;
 }

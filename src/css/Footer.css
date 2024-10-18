@@ -1,0 +1,10 @@
+.footerImage{
+    height: 60px;
+    width: 60px;
+}
+
+
+.link{
+    text-decoration: underline;
+    font-weight: bolder;
+}
