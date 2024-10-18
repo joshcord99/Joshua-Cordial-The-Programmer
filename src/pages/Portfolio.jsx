@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <div>
       <h1 className="portfolioHead">Portfolio</h1>
-      <p>
+      <p className="portfolioText">
         This is a list of all the projects i've completed so far.
       </p>
       <section className="parentCard">

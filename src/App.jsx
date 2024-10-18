@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Nav from './components/NavTabs';
+import Footer from './pages/footer';
 
 function App() {
   const appStyle = {
@@ -7,7 +8,7 @@ function App() {
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat', 
-    height: '100vh', 
+    height: '200vh', 
     margin: '0', 
   };
 
@@ -17,7 +18,9 @@ function App() {
       <main className="mx-3">
         <Outlet />
       </main>
+      <Footer />
     </div>
+
   );
 }
 
