@@ -1,4 +1,5 @@
-.contactHead{
+header.contactHead{
     text-decoration: underline;
     color: orange;
+    font-size: 30px;
 }

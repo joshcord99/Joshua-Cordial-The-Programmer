@@ -5,7 +5,7 @@ import CombinedTextBox from './textbox';
 export default function Contact() {
   return (
     <div>
-      <h1 className="contactHead">Contact Form</h1>
+      <header className="contactHead">Contact Form</header>
       <div>
             <CombinedTextBox />
         </div>
