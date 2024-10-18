@@ -53,6 +53,15 @@ export default function Resume() {
           <li className="resumeText">ASE Certified A6 Electrical/Electronic Systems</li>
           <li className="resumeText">Automotive and Diesel Technology Degree</li>
         </ul>
+
+        <div>
+      <h2 className = 'resumeHead' >Resume Download</h2>
+      <a href="/resume.pdf" download="/Joshua_Cordial_Resume.pdf">
+        <button>Download Resume</button>
+      </a>
+    </div>
+
+
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import "../css/About.css";
 export default function About() {
   return (
     <div>
-      <h1 className='aboutHead'>About Me</h1>
+      <header className='aboutHead'>Joshua Cordial The Programmer</header>
       <div>
         <a href="https://github.com/joshcord99" target="_blank">
           <img src="/AvatarMaker-2.png" className="avatarImage" alt="Avatar" />

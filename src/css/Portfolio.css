@@ -19,9 +19,10 @@ font-weight: bold;
 
 
 
-.portfolioHead {
+header.portfolioHead {
     text-decoration: underline;
     color: orange;
+    font-size: 30px;
 }
 
 .readMeImage {

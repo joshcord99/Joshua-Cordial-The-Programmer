@@ -1,6 +1,7 @@
-h1.aboutHead{
+header.aboutHead{
     color: orange;
     text-decoration: underline;
+    font-size: 30px;
 }
 
 .aboutText{
