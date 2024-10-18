@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Nav from './components/NavTabs';
-import Footer from './pages/footer';
+import Footer from './pages/Footer';
 
 function App() {
   const appStyle = {
