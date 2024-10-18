@@ -2,6 +2,7 @@
 # Joshua-Cordial-The-Programmer
 
 <!-- Insert Gif Here -->
+![](https://github.com/joshcord99/Joshua-Cordial-The-Programmer/blob/main/public/AvatarMaker-2.png)
 
 <!-- // Provide a brief overview of what the project is about, its purpose, and what problem it solves. -->
 ## Description
