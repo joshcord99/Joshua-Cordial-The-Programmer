@@ -11,15 +11,12 @@ const CombinedTextBox = () => {
     const handleNameChange = (event) => {
         setName(event.target.value);
     };
-
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
     };
-
     const handleMessageChange = (event) => {
         setMessage(event.target.value);
     };
-
     const handleNameBlur = () => {
         if (name.trim() === '') {
             setNameWarning(true);
@@ -27,7 +24,6 @@ const CombinedTextBox = () => {
             setNameWarning(false);
         }
     };
-
     const handleEmailBlur = () => {
         if (!email.includes('@') || !email.endsWith('.com')) {
             setEmailWarning(' Error: Please enter a valid email address.');
@@ -35,7 +31,6 @@ const CombinedTextBox = () => {
             setEmailWarning('');
         }
     };
-
     const handleMessageBlur = () => {
         if (message.trim() === '') {
             setMessageWarning(true);
@@ -43,11 +38,9 @@ const CombinedTextBox = () => {
             setMessageWarning(false);
         }
     };
-
     const handleSubmit = () => {
         window.location.href = '';
     };
-
     return (
         <div>
             <div>
@@ -62,7 +55,6 @@ const CombinedTextBox = () => {
                 />
                 {nameWarning && <p style={{ color: 'red' }}>Error: Please enter your name.</p>}
             </div>
-
             <div>
                 <div htmlFor="email-input">Email:</div>
                 <input
@@ -75,7 +67,6 @@ const CombinedTextBox = () => {
                 />
                 {emailWarning && <p style={{ color: 'red' }}>{emailWarning}</p>}
             </div>
-
             <div>
                 <div htmlFor="message-textarea">Message:</div>
                 <textarea

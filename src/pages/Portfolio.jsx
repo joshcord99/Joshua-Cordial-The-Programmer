@@ -1,6 +1,5 @@
 import "../css/Portfolio.css";
 
-
 export default function Portfolio() {
   return (
     <div>
@@ -15,18 +14,14 @@ export default function Portfolio() {
         Personal-README-Generator
         </p>
       </div>
-
       <div className="card">
         <a href="https://github.com/joshcord99/Personal-Vehicle-Builder-Generator" target="_blank">
           <img src="/VehicleBuilder.jpg" className="VehicleBuilderImage" alt="Project2" />
         </a>
-
         <p>
         Personal-Vehicle-Builder-Generator
         </p>
       </div>
-
-
       <div className="card">
         <a href="https://github.com/joshcord99/Game-World" target="_blank">
           <img src="/GameWorld.png" className="GameWorldImage" alt="Project3" />
@@ -35,8 +30,6 @@ export default function Portfolio() {
         Personal-Vehicle-Builder-Generator
         </p>
       </div>
-
-
       <div className="card">
         <a href="https://github.com/joshcord99/Efficient-Studying" target="_blank">
           <img src="/shortcutlogo.jpeg" className="shortculogo" alt="Project4" />
@@ -45,7 +38,6 @@ export default function Portfolio() {
         Efficient-Studying
         </p>
       </div>
-
       <div className="card">
         <a href="https://github.com/joshcord99/Personal-Weather-Information" target="_blank">
           <img src="/weatherimage.jpg" className="weatherimage" alt="Project5" />
@@ -54,7 +46,6 @@ export default function Portfolio() {
         Personal-Weather-Information
         </p>
       </div>
-
       <div className="card">
         <a href="https://github.com/joshcord99/Joshua-Cordial-The-Programmer" target="_blank">
           <img src="/AvatarMaker-2.png" className="avatarimage" alt="Project6" />
@@ -63,11 +54,7 @@ export default function Portfolio() {
         Joshua-Cordial-The-Programmer
         </p>
       </div>
-
-
-
       </section>
-
     </div>
   );
 }

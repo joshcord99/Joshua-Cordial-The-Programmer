@@ -1,18 +1,13 @@
 import "../css/Footer.css";
 
-
-
-
 export default function Footer() {
     return (
         <div>
-  
             <p>
-            <p className="link">
-    Links 
-                 </p>
-               
-            <a href="https://github.com/joshcord99" target="_blank">
+                <p className="link">
+                    Links
+                </p>
+                <a href="https://github.com/joshcord99" target="_blank">
                     <img src="/githubcat.png" className="footerImage" alt="github-logo" />
                 </a>
 
@@ -23,11 +18,7 @@ export default function Footer() {
                 <a href="https://www.indeed.com/?from=gnav-homepage" target="_blank">
                     <img src="/indeedlogo1.png" className="footerImage" alt="indeed-logo" />
                 </a>
-
-
-
             </p>
         </div>
-
     );
 }

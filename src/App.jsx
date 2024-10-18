@@ -11,7 +11,6 @@ function App() {
     height: '200vh', 
     margin: '0', 
   };
-
   return (
     <div style={appStyle}>
       <Nav />
@@ -20,7 +19,6 @@ function App() {
       </main>
       <Footer />
     </div>
-
   );
 }
 
