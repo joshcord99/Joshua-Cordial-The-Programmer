@@ -3,13 +3,11 @@ header.aboutHead{
     text-decoration: underline;
     font-size: 30px;
 }
-
 .aboutText{
     color: black;
     font-weight: bolder ;
     font-size: 30px;
 }
-
 .avatarImage{
     height: 250px;
     width: 250px;

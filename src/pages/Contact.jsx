@@ -1,7 +1,6 @@
 import "../css/Contact.css";
 import CombinedTextBox from './textbox';  
 
-
 export default function Contact() {
   return (
     <div>

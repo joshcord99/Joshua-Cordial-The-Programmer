@@ -19,8 +19,6 @@ a.nav-link.active{
     font-weight:bold;
     text-decoration: underline;
 }
-  
-
 a.nav-link:hover{
     color: white;
 }

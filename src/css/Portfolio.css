@@ -4,37 +4,29 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .card {
     /* background-color: yellow; */
     padding: 5px;
     border: 20px solid black;
 }
-
 .portfolioText{
     color: black;
     font-size: 20px;
 font-weight: bold;
 }
-
-
-
 header.portfolioHead {
     text-decoration: underline;
     color: orange;
     font-size: 30px;
 }
-
 .readMeImage {
     height: 250px;
     width: 250px;
 }
-
 .VehicleBuilderImage {
     height: 250px;
     width: 250px;
 }
-
 .GameWorldImage {
     height: 250px;
     width: 250px;
