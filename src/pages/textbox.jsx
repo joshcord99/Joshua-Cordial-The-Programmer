@@ -47,6 +47,7 @@ const CombinedTextBox = () => {
                 <div htmlFor="name-input">Your Name:</div>
                 <input
                     type="text"
+                    className= "text-box"
                     id="name-input"
                     value={name}
                     onChange={handleNameChange}
@@ -59,6 +60,7 @@ const CombinedTextBox = () => {
                 <div htmlFor="email-input">Email:</div>
                 <input
                     type="email"
+                    className= "text-box"
                     id="email-input"
                     value={email}
                     onChange={handleEmailChange}
@@ -70,8 +72,10 @@ const CombinedTextBox = () => {
             <div>
                 <div htmlFor="message-textarea">Message:</div>
                 <textarea
+                       className= "text-box"
                     id="message-textarea"
                     value={message}
+                    
                     onChange={handleMessageChange}
                     onBlur={handleMessageBlur}
                     rows="4"

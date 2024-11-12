@@ -1,5 +1,6 @@
 header.contactHead{
     text-decoration: underline;
-    color: orange;
-    font-size: 30px;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
 }

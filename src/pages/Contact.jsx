@@ -3,7 +3,7 @@ import CombinedTextBox from './textbox';
 
 export default function Contact() {
   return (
-    <div>
+    <div className="text-center">
       <header className="contactHead">Contact Form</header>
       <div>
             <CombinedTextBox />

@@ -41,7 +41,8 @@ Please fork this project and submit a pull request.
 - React
 - Vite
 - HTML/CSS
- - JavaScript
+- Bootstrap
+- JavaScript
 
 <!-- //Provide contact details for users to reach out for support or inquiries, including email or links to social media profiles. -->
 ## Contact
