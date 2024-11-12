@@ -52,9 +52,9 @@ const CombinedTextBox = () => {
                     value={name}
                     onChange={handleNameChange}
                     onBlur={handleNameBlur}
-                    placeholder="Hello ! What's Your Name?"
+                    placeholder="Enter your Full Name"
                 />
-                {nameWarning && <p style={{ color: 'red' }}>Error: Please enter your name.</p>}
+                {nameWarning && <p style={{ color: 'red' }}>Error: Please enter your Full Name.</p>}
             </div>
             <div>
                 <div htmlFor="email-input">Email:</div>
@@ -65,7 +65,7 @@ const CombinedTextBox = () => {
                     value={email}
                     onChange={handleEmailChange}
                     onBlur={handleEmailBlur}  
-                    placeholder="Enter your email..."
+                    placeholder="Enter your email"
                 />
                 {emailWarning && <p style={{ color: 'red' }}>{emailWarning}</p>}
             </div>
