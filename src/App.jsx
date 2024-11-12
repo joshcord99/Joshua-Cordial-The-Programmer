@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Nav from './components/NavTabs';
 import Footer from './pages/Footer';
 import './css/App.css'
+
 function App() {
   const appStyle = {
     backgroundSize: 'cover', 
