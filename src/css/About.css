@@ -1,14 +1,19 @@
 header.aboutHead{
-    color: orange;
+    color: rgb(22, 22, 22);
+    font-size: 35px;
     text-decoration: underline;
-    font-size: 30px;
+    font-weight: bold;
 }
 .aboutText{
+    display: flex;
+    margin-top: 100px;
     color: black;
-    font-weight: bolder ;
+    font-weight: 350 ;
     font-size: 30px;
 }
 .avatarImage{
-    height: 250px;
-    width: 250px;
+    border-radius: 50px;
+    margin-top: 53px;
+    height: 315px;
+    width: 249px;
 }
