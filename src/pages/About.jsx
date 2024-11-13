@@ -2,8 +2,8 @@ import "../css/About.css";
 
 export default function About() {
   return (
-    <div className="text-center">
-      <header className="aboutHead">Joshua Cordial</header>
+    <div className=" text-center">
+      <p className="aboutHead">Joshua Cordial</p>
       <div>
         <a href="https://github.com/joshcord99" target="_blank">
           <img src="/me.jpg" className="avatarImage" alt="Avatar" />

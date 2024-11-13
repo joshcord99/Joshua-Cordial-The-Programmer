@@ -1,19 +1,76 @@
-header.aboutHead{
+header.aboutHead {
     color: rgb(22, 22, 22);
     font-size: 35px;
     text-decoration: underline;
     font-weight: bold;
-}
-.aboutText{
+  }
+  
+  .aboutText {
     display: flex;
     margin-top: 100px;
     color: black;
-    font-weight: 350 ;
+    font-weight: 350;
     font-size: 30px;
-}
-.avatarImage{
+  }
+  
+  .avatarImage {
     border-radius: 50px;
     margin-top: 53px;
     height: 315px;
     width: 249px;
-}
+  }
+  
+  .aboutHead {
+    color: rgb(22, 22, 22);
+    font-size: 45px; 
+    font-family: monospace;
+    letter-spacing: 10px;
+    border-right: 3px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(14, end) forwards,
+      cursor 0.4s step-end infinite alternate;
+    width: 0; 
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0; 
+    }
+    100% {
+      width: 20ch; 
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .aboutHead {
+      font-size: 35px;
+      letter-spacing: 5px; 
+      animation: typing 2s steps(14, end) forwards,
+        cursor 0.4s step-end infinite alternate;
+      width: 0;
+      max-width: 90%; 
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .aboutHead {
+      font-size: 25px; 
+      letter-spacing: 6px; 
+      animation: typing 2s steps(14, end) forwards,
+        cursor 0.4s step-end infinite alternate;
+      width: 0; 
+      max-width: 95%
+    }
+  }
+  
