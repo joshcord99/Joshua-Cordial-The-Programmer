@@ -9,7 +9,7 @@ export default function Contact() {
             <CombinedTextBox />
         </div>
       <p>
-       Please allow up to 1 business day for me to get back to you.
+      Thank you for reaching out! I aim to respond to all inquiries within one business day. If the contact form does not work due to hosting issues, feel free to email me directly at joshcord99@gmail.com.
       </p>
     </div>
   );
