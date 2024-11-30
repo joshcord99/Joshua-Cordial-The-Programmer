@@ -4,7 +4,7 @@ export default function Portfolio() {
   return (
     <div>
       <header className="portfolioHead text-center"> Completed Projects</header>
-      <p className="text-center portfolioText">
+      <p className="text-center portfolioHeader">
         If interested in seeing the repositories for these projects, please
         click on the image you would like to see. Then you will be redirected to
         a new page.
