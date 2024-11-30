@@ -7,6 +7,7 @@
 .card {
     padding: 5px;
     border: 20px solid black;
+
 }
 .portfolioText{
     color: black;
@@ -31,3 +32,15 @@ header.portfolioHead {
     height: 250px;
     width: 250px;
 }
+
+.weatherimage {
+    height: 250px;
+    width: 250px;
+}
+
+.avatarimage {
+    height: 250px;
+    width: 250px;
+}
+
+
