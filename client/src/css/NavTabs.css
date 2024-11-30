@@ -18,5 +18,5 @@ a.nav-link.active {
   text-decoration: underline;
 }
 a.nav-link:hover {
-  color: red;
+  color: blue;
 }
