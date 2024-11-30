@@ -18,14 +18,6 @@ export default function Footer() {
             alt="linkdn-logo"
           />
         </a>
-
-        <a href="https://www.indeed.com/?from=gnav-homepage" target="_blank">
-          <img
-            src="/indeedlogo1.png"
-            className="footerImage"
-            alt="indeed-logo"
-          />
-        </a>
       </p>
     </div>
   );
