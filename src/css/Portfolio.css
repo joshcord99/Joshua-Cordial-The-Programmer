@@ -4,6 +4,11 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+.portfolioHeader{
+    color: black;
+    font-size: 30px;
+    font-weight: 350;
+}
 .card {
     padding: 5px;
     border: 20px solid white;
@@ -13,6 +18,7 @@
     color: black;
     font-size: 30px;
     font-weight: 350;
+    max-width: 260px;
 }
 header.portfolioHead {
     text-decoration: underline;
