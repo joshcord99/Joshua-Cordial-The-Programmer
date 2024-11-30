@@ -26,27 +26,9 @@ header.portfolioHead {
     font-size: 35px;
     font-weight: bold;
 }
-.readMeImage {
-    height: 250px;
-    width: 250px;
-}
-.VehicleBuilderImage {
-    height: 250px;
-    width: 250px;
-}
-.GameWorldImage {
-    height: 250px;
-    width: 250px;
-}
 
-.weatherimage {
+.image {
     height: 250px;
     width: 250px;
 }
-
-.avatarimage {
-    height: 250px;
-    width: 250px;
-}
-
 
