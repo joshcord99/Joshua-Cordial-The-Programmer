@@ -91,8 +91,8 @@ export default function Resume() {
           <h2 className="resumeHead text-center">Resume Download</h2>
           <a
             className="download-link"
-            href="/resume.pdf"
-            download="/Joshua_Cordial_Resume.pdf"
+            href="/Joshua-Cordial-Resume-pdf.pdf"
+            download="/Joshua-Cordial-Resume-pdf.pdf"
           >
             <button>Download Resume</button>
           </a>
