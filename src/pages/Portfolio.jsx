@@ -17,7 +17,7 @@ export default function Portfolio() {
           >
             <img
               src="/PersonalReadMeProject.png"
-              className="readMeImage"
+              className="image"
               alt="Project1"
             />
           </a>
@@ -30,7 +30,7 @@ export default function Portfolio() {
           >
             <img
               src="/VehicleBuilder.jpg"
-              className="VehicleBuilderImage"
+              className="image"
               alt="Project2"
             />
           </a>
@@ -44,7 +44,7 @@ export default function Portfolio() {
           >
             <img
               src="/shortcutlogo.jpeg"
-              className="shortculogo"
+              className="image"
               alt="Project4"
             />
           </a>
@@ -57,7 +57,7 @@ export default function Portfolio() {
           >
             <img
               src="/weatherimage.jpg"
-              className="weatherimage"
+              className="image"
               alt="Project5"
             />
           </a>
@@ -70,7 +70,7 @@ export default function Portfolio() {
           >
             <img
               src="/AvatarMaker-2.png"
-              className="avatarimage"
+              className="image"
               alt="Project6"
             />
           </a>
