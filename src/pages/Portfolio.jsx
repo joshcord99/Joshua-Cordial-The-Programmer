@@ -34,16 +34,7 @@ export default function Portfolio() {
               alt="Project2"
             />
           </a>
-          <p>Personal-Vehicle-Builder-Generator</p>
-        </div>
-        <div className="card">
-          <a href="https://github.com/joshcord99/Game-World" target="_blank">
-            <img
-              src="/GameWorld.png"
-              className="GameWorldImage"
-              alt="Project3"
-            />
-          </a>
+
           <p className="portfolioText">Personal-Vehicle-Builder-Generator</p>
         </div>
         <div className="card">
