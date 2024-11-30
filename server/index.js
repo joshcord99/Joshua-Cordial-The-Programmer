@@ -32,7 +32,7 @@ app.post("/send-email", async (req, res) => {
     const mailOptions = {
       from: email, 
       to: process.env.EMAIL_USER, 
-      subject: `You have been contact by ${name}`,
+      subject: `YOU HAVE BEEN CONTACTED BY ${name}`,
       text: `
 You have received a new message from your website's contact form:
 Name: ${name}
