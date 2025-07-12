@@ -5,14 +5,17 @@
     "description": "front-end && backend",
     "type": "module",
     "scripts": {
-    "install": "cd server && npm i && cd ../client && npm i",
-    "build": "cd client && npm run build",
-    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-    "clean": "rm -rf server/node_modules client/node_modules server/dist client/dist"
-},
+        "install": "cd server && npm i && cd ../client && npm i",
+        "build": "cd client && npm run build",
+        "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+        "clean": "rm -rf server/node_modules client/node_modules server/dist client/dist"
+    },
     "devDependencies": {
-      "concurrently": "^8.2.2",
-      "wait-on": "^7.2.0"
+        "concurrently": "^8.2.2",
+        "wait-on": "^7.2.0"
+    },
+    "dependencies": {
+        "node-fetch": "^2.7.0",
+        "swiper": "^11.2.10"
     }
-  }
-  
+}

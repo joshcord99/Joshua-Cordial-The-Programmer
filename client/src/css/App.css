@@ -1,16 +1,68 @@
-/* #root {
-} */
+:root {
+  --bg-color: #f7f9fa;
+  --text-color: #181818;
+  --card-bg: #fff;
+  --nav-bg: #fff;
+  --nav-link: #222;
+  --nav-link-active: #fff;
+  --nav-link-active-bg: lightblue;
+}
+.light-mode {
+  --bg-color: #f7f9fa;
+  --text-color: #181818;
+  --card-bg: #fff;
+  --nav-bg: #fff;
+  --nav-link: #222;
+  --nav-link-active: #fff;
+  --nav-link-active-bg: lightblue;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.dark-mode {
+  --bg-color: #181818;
+  --text-color: #f7f9fa;
+  --card-bg: #23272f;
+  --nav-bg: #23272f;
+  --nav-link: #f7f9fa;
+  --nav-link-active: #23272f;
+  --nav-link-active-bg: #4f8cff;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body,
+html {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 .text-box {
   width: 300px;
+  background: var(--card-bg);
+  color: var(--text-color);
 }
+
 .footer-away {
   margin-top: 20px;
+  margin-left: 0.5in;
+  text-align: left;
 }
+
 .text-center {
   text-align: center;
 }
 .main-container {
-  min-height: 90vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .logo {
   height: 6em;
@@ -35,4 +87,115 @@
 }
 .resumeHeading {
   text-decoration: underline;
+}
+.page {
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main-content,
+.main-container {
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-size: 2.5rem;
+  color: #333;
+  cursor: pointer;
+  padding: 0 16px;
+  transition: color 0.2s;
+}
+
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+@media (max-width: 375px) {
+  html,
+  body,
+  #root,
+  .page-wrapper,
+  .main-container,
+  .main-content {
+    width: 100% !important;
+    overflow-x: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .card,
+  .resumeText,
+  .aboutText,
+  .portfolioHead,
+  .portfolioHeader {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 90% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body,
+  #root,
+  .page-wrapper,
+  .main-container,
+  .main-content {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 90% !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .portfolioHead,
+  .portfolioHeader,
+  .aboutHead,
+  .resumeHead,
+  .contactHead {
+    font-size: 1.2em !important;
+    padding: 0.2em 0.4em !important;
+    margin: 0.2em 0 !important;
+  }
+  p,
+  .aboutText,
+  .resumeText,
+  .portfolioText,
+  .portfolioDescription,
+  .slide-counter {
+    font-size: 0.95em !important;
+    padding: 0.2em 0.4em !important;
+    margin: 0.2em 0 !important;
+  }
+  .card,
+  .resumeText,
+  .aboutText,
+  .portfolioHead,
+  .portfolioHeader {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 90% !important;
+  }
 }

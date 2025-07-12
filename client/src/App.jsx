@@ -1,23 +1,38 @@
-import { Outlet } from 'react-router-dom';
-import Nav from './components/NavTabs';
-import Footer from './pages/Footer';
-import './css/App.css'
+import { Outlet } from "react-router-dom";
+import Nav from "./components/Navbar";
+import Footer from "./pages/Footer";
+import "./css/App.css";
+import ChatBotUI from "./components/chatbotui";
+import { ThemeProvider, ThemeContext } from "./theme/ThemeContext";
+import { useContext } from "react";
 
-function App() {
+function AppContent() {
+  const { theme } = useContext(ThemeContext);
   const appStyle = {
-    backgroundSize: 'cover', 
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat', 
-    margin: '0', 
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    margin: "0",
   };
   return (
-    <div style={appStyle}>
-      <Nav />
-      <main className="mx-3 main-container" >
-        <Outlet />
-      </main>
-      <Footer />
+    <div className={theme + "-mode"} style={appStyle}>
+      <div className="page-wrapper">
+        <Nav />
+        <main className="main-content">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+      <ChatBotUI />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

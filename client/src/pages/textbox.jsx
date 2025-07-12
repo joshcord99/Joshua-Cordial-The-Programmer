@@ -41,7 +41,6 @@ const CombinedTextBox = () => {
       return;
     }
 
-
     const formData = { name, email, message };
     try {
       const response = await fetch("http://localhost:3000/send-email", {
@@ -67,9 +66,20 @@ const CombinedTextBox = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ width: "300px", margin: "auto" }}>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        width: "100%",
+        maxWidth: "600px",
+        margin: "auto",
+        padding: "0 10px",
+      }}
+    >
       <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="name-input" style={{ display: "block", marginBottom: "5px" }}>
+        <label
+          htmlFor="name-input"
+          style={{ display: "block", marginBottom: "5px" }}
+        >
           Your Name:
         </label>
         <input
@@ -82,9 +92,11 @@ const CombinedTextBox = () => {
           placeholder="Enter your Full Name"
           style={{
             width: "100%",
-            padding: "10px",
+            padding: "18px",
+            fontSize: "22px",
             border: "1px solid #ccc",
             borderRadius: "4px",
+            boxSizing: "border-box",
           }}
         />
         {nameWarning && (
@@ -94,7 +106,10 @@ const CombinedTextBox = () => {
         )}
       </div>
       <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="email-input" style={{ display: "block", marginBottom: "5px" }}>
+        <label
+          htmlFor="email-input"
+          style={{ display: "block", marginBottom: "5px" }}
+        >
           Email:
         </label>
         <input
@@ -107,9 +122,11 @@ const CombinedTextBox = () => {
           placeholder="Enter your email"
           style={{
             width: "100%",
-            padding: "10px",
+            padding: "18px",
+            fontSize: "22px",
             border: "1px solid #ccc",
             borderRadius: "4px",
+            boxSizing: "border-box",
           }}
         />
         {emailWarning && (
@@ -117,7 +134,10 @@ const CombinedTextBox = () => {
         )}
       </div>
       <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="message-textarea" style={{ display: "block", marginBottom: "5px" }}>
+        <label
+          htmlFor="message-textarea"
+          style={{ display: "block", marginBottom: "5px" }}
+        >
           Message:
         </label>
         <textarea
@@ -130,10 +150,12 @@ const CombinedTextBox = () => {
           placeholder="Start Typing..."
           style={{
             width: "100%",
-            padding: "10px",
+            padding: "18px",
+            fontSize: "22px",
             border: "1px solid #ccc",
             borderRadius: "4px",
             resize: "none",
+            boxSizing: "border-box",
           }}
         />
         {messageWarning && (
@@ -146,12 +168,14 @@ const CombinedTextBox = () => {
         type="submit"
         style={{
           width: "100%",
-          padding: "10px",
+          padding: "18px",
+          fontSize: "22px",
           backgroundColor: "#4CAF50",
           color: "white",
           border: "none",
           borderRadius: "4px",
           cursor: "pointer",
+          boxSizing: "border-box",
         }}
       >
         Submit

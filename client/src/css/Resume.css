@@ -1,14 +1,46 @@
-.resumeHead{
-    text-decoration: underline;
-    color: black
+.resumeHead {
+  text-decoration: underline;
+  color: var(--text-color);
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
-.resumeText{
-    color: black;
-    font-size: 25px;
-    font-weight: 350;
+.resumeText {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 1.7;
+  margin-bottom: 12px;
 }
 
-.download-link{
-    display: flex;
-    justify-content: center;
+#resume-text ul {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+#resume-text li {
+  margin-bottom: 8px;
+}
+
+.download-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.main-container {
+  padding-top: 32px !important;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .resumeHead,
+  .resumeText {
+    font-size: 1em !important;
+    padding: 0.2em 0.4em !important;
+    margin: 0.2em 0 !important;
+  }
 }

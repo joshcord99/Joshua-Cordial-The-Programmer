@@ -1,6 +1,18 @@
-header.contactHead{
-    text-decoration: underline;
-    color: black;
-    font-size: 35px;
-    font-weight: bold;
+header.contactHead {
+  text-decoration: underline;
+  color: var(--text-color);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.main-container {
+  padding-top: 20px !important;
+}
+
+@media (max-width: 600px) {
+  .contactHead {
+    font-size: 1em !important;
+    padding: 0.2em 0.4em !important;
+    margin: 0.2em 0 !important;
+  }
 }
