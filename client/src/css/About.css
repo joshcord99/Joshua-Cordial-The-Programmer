@@ -12,9 +12,8 @@ header.aboutHead {
   line-height: 1.7;
   padding: 0 32px;
   text-align: center;
-
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .avatarImage {
@@ -31,12 +30,13 @@ header.aboutHead {
   color: var(--text-color);
   font-size: 45px;
   font-family: monospace;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   border-right: 3px solid;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing-desktop 2s steps(15, end) forwards,
-    cursor 0.4s step-end infinite alternate;
+  animation: typing-desktop 1.8s steps(16, end) forwards,
+    cursor 0.7s step-end infinite alternate;
+  animation-delay: 0s, 1.8s;
   width: 0;
   max-width: 100%;
   text-align: center;
@@ -63,7 +63,7 @@ header.aboutHead {
     width: 0;
   }
   to {
-    width: 19ch;
+    width: 16ch;
   }
 }
 
@@ -72,16 +72,17 @@ header.aboutHead {
     width: 0;
   }
   to {
-    width: 30ch;
+    width: 18ch;
   }
 }
 
 @media (max-width: 768px) {
   .aboutHead {
     font-size: 35px;
-    letter-spacing: 5px;
-    animation: typing-mobile 1.5s steps(15, end) forwards,
-      cursor 0.4s step-end infinite alternate;
+    letter-spacing: 1px;
+    animation: typing-mobile 1.8s steps(16, end) forwards,
+      cursor 0.7s step-end infinite alternate;
+    animation-delay: 0s, 1.8s;
     width: 0;
     max-width: 90%;
   }
@@ -90,9 +91,10 @@ header.aboutHead {
 @media (max-width: 375px) {
   .aboutHead {
     font-size: 25px;
-    letter-spacing: 6px;
-    animation: typing-mobile 1.2s steps(15, end) forwards,
-      cursor 0.4s step-end infinite alternate;
+    letter-spacing: 1px;
+    animation: typing-mobile 1.8s steps(16, end) forwards,
+      cursor 0.7s step-end infinite alternate;
+    animation-delay: 0s, 1.8s;
     width: 0;
     max-width: 95%;
   }
@@ -117,7 +119,7 @@ header.aboutHead {
     padding: 0.2em 0.4em !important;
     margin-top: 50px !important;
     margin-bottom: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 }
