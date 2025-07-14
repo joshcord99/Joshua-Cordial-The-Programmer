@@ -247,6 +247,44 @@ Never make up information that's not on Joshua's site. If the requested info isn
     setMessages(updatedMessages);
     setInput("");
     setLoading(true);
+
+    try {
+      const res = await fetch("/.netlify/functions/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: [systemPrompt, ...updatedMessages.slice(1, -1)],
+        }),
+      });
+      const data = await res.json();
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        const idx = newMessages.findIndex(
+          (m) => m.role === "assistant" && m.content === "Thinking . . ."
+        );
+        if (idx !== -1) {
+          newMessages[idx] = { role: "assistant", content: data.reply };
+        }
+        return newMessages;
+      });
+    } catch (err) {
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        const idx = newMessages.findIndex(
+          (m) => m.role === "assistant" && m.content === "Thinking . . ."
+        );
+        if (idx !== -1) {
+          newMessages[idx] = {
+            role: "assistant",
+            content:
+              "Sorry, something went wrong while processing your request.",
+          };
+        }
+        return newMessages;
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

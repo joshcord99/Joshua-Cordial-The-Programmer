@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = async (event) => {
-  console.log("📥 Received request", event.httpMethod);
+  console.log("Received request", event.httpMethod);
 
   if (event.httpMethod === "OPTIONS") {
     return {
@@ -27,7 +27,7 @@ exports.handler = async (event) => {
 
   try {
     const body = JSON.parse(event.body);
-    console.log("📨 Request body:", body);
+    console.log("Request body:", body);
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
