@@ -3,7 +3,6 @@ const fetch = require("node-fetch");
 exports.handler = async (event) => {
   console.log("📥 Received request", event.httpMethod);
 
-  // ✅ Handle preflight request
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
@@ -16,7 +15,6 @@ exports.handler = async (event) => {
     };
   }
 
-  // ✅ Reject non-POST requests
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -38,7 +36,7 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: body.messages 
+        messages: body.messages,
       }),
     });
 
@@ -51,7 +49,7 @@ exports.handler = async (event) => {
       statusCode: 200,
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*", // ✅ allow requests from frontend
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({ reply }),
     };
@@ -60,7 +58,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 500,
       headers: {
-        "Access-Control-Allow-Origin": "*", // ✅ still allow CORS on error
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({ reply: "Server error: " + err.message }),
     };

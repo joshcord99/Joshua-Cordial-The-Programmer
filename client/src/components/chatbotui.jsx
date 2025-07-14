@@ -35,6 +35,35 @@ Feel free to ask me anything about my background, work, or how to get in touch!`
   const [loading, setLoading] = useState(false);
   const [minimized, setMinimized] = useState(true);
   const chatEndRef = useRef(null);
+  const pendingPageNavigation = useRef(null);
+
+  const detectDirectPageRequest = (text) => {
+    const lower = text.toLowerCase();
+    if (/resume|cv/.test(lower) && /(show|see|want|view|open)/.test(lower))
+      return "/resume";
+    if (
+      /portfolio|project/.test(lower) &&
+      /(show|see|want|view|open)/.test(lower)
+    )
+      return "/portfolio";
+    if (
+      /contact|email|reach/.test(lower) &&
+      /(show|see|want|view|open)/.test(lower)
+    )
+      return "/contact";
+    if (
+      /about|bio|background|him|her|profile/.test(lower) &&
+      /(show|see|want|view|open)/.test(lower)
+    )
+      return "/";
+    return null;
+  };
+
+  const isAffirmative = (text) => {
+    return /^(y(es)?|ya|yep|yeah|sure|ok(ay)?|please|of course|go ahead|absolutely|certainly|definitely|why not|sounds good|let'?s do it|i do|i would|i want|i need|i'd like|i will|i am|i'm in)$/i.test(
+      text.trim()
+    );
+  };
 
   const systemPrompt = {
     role: "system",
@@ -94,7 +123,42 @@ Never make up information that's not on Joshua's site. If the requested info isn
     const navigateMatch = content.match(/\[NAVIGATE:(.+?)\]/);
     if (navigateMatch) {
       const path = navigateMatch[1].trim();
-      navigate(path);
+      let pageName = path === "/" ? "about" : path.replace("/", "");
+      const summary = content.replace(/\[NAVIGATE:(.+?)\]/g, "").trim();
+      let suggestPath = path;
+      let suggestPageName = pageName;
+      if (
+        /experience|work|job|career|background|cv/.test(summary.toLowerCase())
+      ) {
+        suggestPath = "/resume";
+        suggestPageName = "resume";
+      } else if (/project/.test(summary.toLowerCase())) {
+        suggestPath = "/portfolio";
+        suggestPageName = "portfolio";
+      } else if (/contact|email|reach/.test(summary.toLowerCase())) {
+        suggestPath = "/contact";
+        suggestPageName = "contact";
+      }
+      if (summary) {
+        setMessages((prev) => [
+          ...prev.slice(0, -1),
+          { ...prev[prev.length - 1], content: summary },
+          {
+            role: "assistant",
+            content: `Would you like to see his ${suggestPageName} page?`,
+          },
+        ]);
+        pendingPageNavigation.current = suggestPath;
+      } else {
+        setMessages((prev) => [
+          ...prev.slice(0, -1),
+          {
+            role: "assistant",
+            content: `Would you like to see his ${suggestPageName} page?`,
+          },
+        ]);
+        pendingPageNavigation.current = suggestPath;
+      }
       return;
     }
 
@@ -144,6 +208,36 @@ Never make up information that's not on Joshua's site. If the requested info isn
     e.preventDefault();
     if (!input.trim()) return;
 
+    const directPath = detectDirectPageRequest(input);
+    if (directPath) {
+      let pageName = directPath === "/" ? "about" : directPath.replace("/", "");
+      navigate(directPath);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: `Here is the ${pageName} page` },
+      ]);
+      pendingPageNavigation.current = null;
+      setInput("");
+      setLoading(false);
+      return;
+    }
+
+    if (pendingPageNavigation.current) {
+      if (isAffirmative(input)) {
+        const path = pendingPageNavigation.current;
+        let pageName = path === "/" ? "about" : path.replace("/", "");
+        navigate(path);
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: `Here is the ${pageName} page` },
+        ]);
+        pendingPageNavigation.current = null;
+        setInput("");
+        setLoading(false);
+        return;
+      }
+    }
+
     const userMessage = { role: "user", content: input };
     const updatedMessages = [
       ...messages,
@@ -153,52 +247,6 @@ Never make up information that's not on Joshua's site. If the requested info isn
     setMessages(updatedMessages);
     setInput("");
     setLoading(true);
-
-    try {
-      const res = await fetch("/.netlify/functions/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          messages: [systemPrompt, ...updatedMessages.slice(0, -1)],
-        }),
-      });
-      const data = await res.json();
-      setMessages((prev) => {
-        const newMessages = [...prev];
-        const idx = newMessages
-          .map((m) => m.role + m.content)
-          .lastIndexOf("assistantThinking...");
-        if (idx !== -1) {
-          newMessages[idx] = { role: "assistant", content: data.reply };
-        } else {
-          newMessages.push({ role: "assistant", content: data.reply });
-        }
-        return newMessages;
-      });
-    } catch (err) {
-      setMessages((prev) => {
-        const newMessages = [...prev];
-        const idx = newMessages
-          .map((m) => m.role + m.content)
-          .lastIndexOf("assistantThinking...");
-        if (idx !== -1) {
-          newMessages[idx] = {
-            role: "assistant",
-            content:
-              "Sorry, something went wrong while processing your request.",
-          };
-        } else {
-          newMessages.push({
-            role: "assistant",
-            content:
-              "Sorry, something went wrong while processing your request.",
-          });
-        }
-        return newMessages;
-      });
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (

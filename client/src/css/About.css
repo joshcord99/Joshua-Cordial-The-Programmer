@@ -46,12 +46,10 @@ header.aboutHead {
 
 .main-container {
   padding-top: 20px !important;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 @keyframes cursor {
