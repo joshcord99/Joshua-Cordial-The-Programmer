@@ -19,6 +19,7 @@ This project is a portfolio built using React to showcase my work as a web devel
 - HTML/CSS
 - Bootstrap
 - JavaScript
+- Langchain
 
 <!-- //Provide contact details for users to reach out for support or inquiries, including email or links to social media profiles. -->
 ## Contact
