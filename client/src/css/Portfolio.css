@@ -1,32 +1,41 @@
 .portfolioHead {
   text-decoration: underline;
   color: var(--text-color);
-  font-size: 35px;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .portfolioHeader {
   color: var(--text-color);
-  font-size: 25px;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
   font-weight: 350;
   text-align: center;
   margin-bottom: 30px;
+  word-break: break-word;
 }
+
 
 .main-container.page {
-  padding-top: 30px !important;
+  padding: clamp(1rem, 5vw, 2rem) 1rem;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
 }
 
+
 .carousel-container {
+  width: 100%;
   max-width: 700px;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 }
 
 .swiper {
-  padding: 0;
+  padding: 0 1rem;
   background-color: transparent;
 }
 
@@ -42,6 +51,7 @@
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
 .image {
@@ -63,18 +73,20 @@
 }
 
 .portfolioText {
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 600;
   margin-top: 10px;
   color: var(--text-color);
 }
 
 .portfolioDescription {
-  font-size: 16px;
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
   color: var(--nav-link);
   max-width: 280px;
   margin: 8px auto 0;
   line-height: 1.4;
+  text-align: center;
+  word-break: break-word;
 }
 
 .swiper-button-prev,
@@ -94,20 +106,6 @@
   margin-top: 1.5rem !important;
 }
 
-@media (max-width: 800px) {
-  .swiper {
-    padding: 0 20px;
-  }
-
-  .swiper-button-prev {
-    left: -20px;
-  }
-
-  .swiper-button-next {
-    right: -20px;
-  }
-}
-
 @media (max-width: 900px) {
   .carousel-container,
   .swiper,
@@ -119,10 +117,22 @@
     width: 100% !important;
     max-width: 100% !important;
     padding: 0 !important;
+    box-sizing: border-box;
   }
+
   .image {
     height: auto !important;
     max-height: 50vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .swiper-button-prev {
+    left: -20px;
+  }
+
+  .swiper-button-next {
+    right: -20px;
   }
 }
 
@@ -135,17 +145,20 @@
     font-size: 1em !important;
     padding: 0.2em 0.4em !important;
     margin: 0.2em 0 !important;
+    text-align: center;
   }
+
   .card,
   .card a {
     padding: 4px !important;
   }
+
   .portfolioDescription {
-    text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
   }
+
   .carousel-nav-mobile {
     display: flex;
     justify-content: center;
@@ -155,14 +168,16 @@
     position: relative !important;
     z-index: 1 !important;
   }
+
   .carousel-nav-desktop {
     display: none !important;
   }
+
   .carousel-nav-mobile .swiper-button-prev,
   .carousel-nav-mobile .swiper-button-next {
     position: relative !important;
     margin: 0 10px !important;
-    display: inline-block !important;
+    display: inline-flex !important;
     top: unset !important;
     left: unset !important;
     right: unset !important;
@@ -177,12 +192,11 @@
     box-shadow: none !important;
     font-weight: 600;
     line-height: 1.2;
-    z-index: 1 !important;
     text-align: center !important;
     justify-content: center;
     align-items: center;
-    display: inline-flex !important;
   }
+
   .carousel-nav-mobile .swiper-button-prev::after,
   .carousel-nav-mobile .swiper-button-next::after {
     display: none !important;
