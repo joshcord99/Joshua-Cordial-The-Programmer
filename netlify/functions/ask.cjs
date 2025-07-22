@@ -41,7 +41,7 @@ exports.handler = async (event) => {
     });
 
     const data = await response.json();
-    console.log("🧠 AI API response:", data);
+    console.log("AI API response:", data);
 
     const reply = data.choices?.[0]?.message?.content || "No reply";
 
@@ -54,7 +54,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ reply }),
     };
   } catch (err) {
-    console.error("🔥 Error in /api/ask:", err);
+    console.error("Error in /api/ask:", err);
     return {
       statusCode: 500,
       headers: {

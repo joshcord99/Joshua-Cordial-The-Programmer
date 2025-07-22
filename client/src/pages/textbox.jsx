@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/Contact.css";
 
 const CombinedTextBox = () => {
   const [name, setName] = useState("");
@@ -8,45 +9,32 @@ const CombinedTextBox = () => {
   const [emailWarning, setEmailWarning] = useState("");
   const [messageWarning, setMessageWarning] = useState(false);
 
-  const handleNameChange = (event) => setName(event.target.value);
-
-  const handleEmailChange = (event) => setEmail(event.target.value);
-
-  const handleMessageChange = (event) => setMessage(event.target.value);
+  const handleNameChange = (e) => setName(e.target.value);
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handleMessageChange = (e) => setMessage(e.target.value);
 
   const handleNameBlur = () => setNameWarning(name.trim() === "");
-
   const handleEmailBlur = () =>
     setEmailWarning(
       !email.includes("@") || !email.endsWith(".com")
         ? "Error: Please enter a valid email address."
         : ""
     );
-
   const handleMessageBlur = () => setMessageWarning(message.trim() === "");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    if (name.trim() === "") {
-      setNameWarning(true);
-      return;
-    }
-    if (!email.includes("@") || !email.endsWith(".com")) {
-      setEmailWarning("Error: Please enter a valid email address.");
-      return;
-    }
-    if (message.trim() === "") {
-      setMessageWarning(true);
-      return;
-    }
+    if (name.trim() === "") return setNameWarning(true);
+    if (!email.includes("@") || !email.endsWith(".com"))
+      return setEmailWarning("Error: Please enter a valid email address.");
+    if (message.trim() === "") return setMessageWarning(true);
 
-    const formData = { name, email, message };
     try {
       const response = await fetch("http://localhost:3000/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ name, email, message }),
       });
 
       if (response.ok) {
@@ -59,127 +47,55 @@ const CombinedTextBox = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      alert(
-        "An error occurred while sending your message. Please try again later."
-      );
+      alert("An error occurred while sending your message.");
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        width: "100%",
-        maxWidth: "600px",
-        margin: "auto",
-        padding: "0 10px",
-      }}
-    >
-      <div style={{ marginBottom: "15px" }}>
-        <label
-          htmlFor="name-input"
-          style={{ display: "block", marginBottom: "5px" }}
-        >
-          Your Name:
-        </label>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="name-input">Your Name:</label>
         <input
+          id="name-input"
           type="text"
           className="text-box"
-          id="name-input"
           value={name}
           onChange={handleNameChange}
           onBlur={handleNameBlur}
           placeholder="Enter your Full Name"
-          style={{
-            width: "100%",
-            padding: "18px",
-            fontSize: "22px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-            boxSizing: "border-box",
-          }}
         />
-        {nameWarning && (
-          <p style={{ color: "red", fontSize: "12px" }}>
-            Error: Please enter your Full Name.
-          </p>
-        )}
+        {nameWarning && <p className="warning">Error: Please enter your Full Name.</p>}
       </div>
-      <div style={{ marginBottom: "15px" }}>
-        <label
-          htmlFor="email-input"
-          style={{ display: "block", marginBottom: "5px" }}
-        >
-          Email:
-        </label>
+
+      <div className="form-group">
+        <label htmlFor="email-input">Email:</label>
         <input
+          id="email-input"
           type="email"
           className="text-box"
-          id="email-input"
           value={email}
           onChange={handleEmailChange}
           onBlur={handleEmailBlur}
           placeholder="Enter your email"
-          style={{
-            width: "100%",
-            padding: "18px",
-            fontSize: "22px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-            boxSizing: "border-box",
-          }}
         />
-        {emailWarning && (
-          <p style={{ color: "red", fontSize: "12px" }}>{emailWarning}</p>
-        )}
+        {emailWarning && <p className="warning">{emailWarning}</p>}
       </div>
-      <div style={{ marginBottom: "15px" }}>
-        <label
-          htmlFor="message-textarea"
-          style={{ display: "block", marginBottom: "5px" }}
-        >
-          Message:
-        </label>
+
+      <div className="form-group">
+        <label htmlFor="message-textarea">Message:</label>
         <textarea
-          className="text-box"
           id="message-textarea"
+          className="text-box"
           value={message}
           onChange={handleMessageChange}
           onBlur={handleMessageBlur}
-          rows="4"
           placeholder="Start Typing..."
-          style={{
-            width: "100%",
-            padding: "18px",
-            fontSize: "22px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-            resize: "none",
-            boxSizing: "border-box",
-          }}
+          rows="4"
         />
-        {messageWarning && (
-          <p style={{ color: "red", fontSize: "12px" }}>
-            Error: Please enter a message.
-          </p>
-        )}
+        {messageWarning && <p className="warning">Error: Please enter a message.</p>}
       </div>
-      <button
-        type="submit"
-        style={{
-          width: "100%",
-          padding: "18px",
-          fontSize: "22px",
-          backgroundColor: "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: "4px",
-          cursor: "pointer",
-          boxSizing: "border-box",
-        }}
-      >
-        Submit
-      </button>
+
+      <button type="submit" className="submit-btn">Submit</button>
     </form>
   );
 };
