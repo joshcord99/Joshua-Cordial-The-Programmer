@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { marked } from "marked";
 import resumeData from "../data/resumeData";
 import avatarImg from "../../public/AvatarMaker-2.png";
 import { ThemeContext } from "../theme/ThemeContext";
@@ -7,28 +8,35 @@ import "../css/chatboxui.css";
 
 const resumeText = JSON.stringify(resumeData, null, 2);
 
+
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+  sanitize: false,
+});
+
 const ChatBotUI = () => {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: `👋 Hey there! I'm Joshua Cordial — welcome to my site.
+      content: `👋 **Hey there!** I'm Joshua Cordial — welcome to my site.
 
-Common Questions:
+## **Common Questions:**
 - "Tell me about him"
 - "What experience does he have?"
 - "What projects has he done?"
 - "Does he have experience in PHP?"
 - "List all skills he has"
 
-Here are things I can do/have:
-- Page navigation
-- Summarization
-- Analyzation
-- Contextual Memory
+## **Things I can do:**
+- **Page navigation** - Guide you to different sections
+- **Summarization** - Provide concise overviews
+- **Analysis** - Deep dive into specific topics
+- **Contextual Memory** - Remember our conversation
 
-Feel free to ask me anything about my background, work, or how to get in touch!`,
+*Feel free to ask me anything about my background, work, or how to get in touch!*`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -70,6 +78,13 @@ Feel free to ask me anything about my background, work, or how to get in touch!`
     content: `
 You are a helpful AI assistant for Joshua Cordial's personal website. You can answer questions, guide users, and help navigate between pages.
 You have access to Joshua's resume, which is provided below. Use this information to answer any questions about Joshua's experience, skills, or background.
+
+**Important**: Format your responses using markdown for better readability. Use:
+- **Bold text** for emphasis
+- *Italic text* for secondary information
+- Bullet points for lists
+- Headers (##) for sections
+- Code formatting for technical terms
 
 Resume:
 ${resumeText}
@@ -317,9 +332,12 @@ Never make up information that's not on Joshua's site. If the requested info isn
         <div className="chat-body">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.role}`}>
-              <span className="message-content">
-                {msg.content.replace(/\[.*?:.*?\]/g, "")}
-              </span>
+              <span
+                className="message-content"
+                dangerouslySetInnerHTML={{
+                  __html: marked(msg.content.replace(/\[.*?:.*?\]/g, "")),
+                }}
+              />
             </div>
           ))}
           <div ref={chatEndRef} />
