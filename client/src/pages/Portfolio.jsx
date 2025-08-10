@@ -14,7 +14,7 @@ export default function Portfolio() {
   const projects = [
     {
       link: "https://github.com/joshcord99/Personal-README-Generator",
-      img: "/PersonalReadMeProject.png",
+      img: "/projects/PersonalReadMeProject.png",
       alt: "Personal README Generator",
       title: "Personal-README-Generator",
       description:
@@ -22,7 +22,7 @@ export default function Portfolio() {
     },
     {
       link: "https://github.com/joshcord99/Personal-Vehicle-Builder-Generator",
-      img: "/VehicleBuilder.jpg",
+      img: "/projects/VehicleBuilder.jpg",
       alt: "Vehicle Builder",
       title: "Personal-Vehicle-Builder-Generator",
       description:
@@ -30,7 +30,7 @@ export default function Portfolio() {
     },
     {
       link: "https://github.com/joshcord99/Efficient-Studying",
-      img: "/shortcutlogo.jpeg",
+      img: "/projects/GameWorld.png",
       alt: "Efficient Studying",
       title: "Efficient-Studying",
       description:
@@ -38,7 +38,7 @@ export default function Portfolio() {
     },
     {
       link: "https://github.com/joshcord99/Personal-Weather-Information",
-      img: "/weatherimage.jpg",
+      img: "/projects/weatherimage.jpg",
       alt: "Weather Info",
       title: "Personal-Weather-Information",
       description:
@@ -62,7 +62,7 @@ export default function Portfolio() {
     },
     {
       link: "https://github.com/joshcord99/Talker",
-      img: "/zen.jpg",
+      img: "/projects/zen.jpg",
       alt: "Talker AI Therapist",
       title: "Talker - AI Therapist",
       description:
@@ -70,7 +70,7 @@ export default function Portfolio() {
     },
     {
       link: "https://github.com/joshcord99/stoxai",
-      img: "/stoxai.png",
+      img: "/projects/stoxai.png",
       alt: "Market Analysis",
       title: "StoxAI - Stock Market Analysis",
       description:
