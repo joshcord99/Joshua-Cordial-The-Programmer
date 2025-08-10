@@ -13,6 +13,37 @@ export default function Portfolio() {
 
   const projects = [
     {
+      link: "https://github.com/joshcord99/stoxai",
+      img: "/projects/stoxai.png",
+      alt: "Market Analysis",
+      title: "StoxAI - Stock Market Analysis",
+      description:
+        "A stock market analysis tool that uses the algorythms to analyze stock market data and provide insights.",
+    },
+    {
+      link: "https://github.com/anthonymoon2/TomoPudgy",
+      img: "/tamapudgy.png",
+      alt: "TamaPudgy",
+      title: "TamaPudgy",
+      description:
+        "Collaborated project with team to create a tamagotchi inspired diet tracker",
+    },
+    {
+      link: "https://github.com/joshcord99/Talker",
+      img: "/projects/zen.jpg",
+      alt: "Talker AI Therapist",
+      title: "Talker - AI Therapist",
+      description: "Backend using MongoDB and Open-AI API integration",
+    },
+    {
+      link: "https://github.com/joshcord99/EZBadges",
+      img: "/err404.jpg",
+      alt: "EZBadges",
+      title: "EZBadges",
+      description:
+        "C# CLI application that creates employee badges using SkiaSharp for image generation and API integration.",
+    },
+    {
       link: "https://github.com/joshcord99/Personal-README-Generator",
       img: "/projects/PersonalReadMeProject.png",
       alt: "Personal README Generator",
@@ -29,52 +60,12 @@ export default function Portfolio() {
         "Lets users create custom virtual vehicles by selecting parts with price totals.",
     },
     {
-      link: "https://github.com/joshcord99/Efficient-Studying",
-      img: "/projects/GameWorld.png",
-      alt: "Efficient Studying",
-      title: "Efficient-Studying",
-      description:
-        "A productivity app for organizing study sessions and tracking focus time.",
-    },
-    {
       link: "https://github.com/joshcord99/Personal-Weather-Information",
       img: "/projects/weatherimage.jpg",
       alt: "Weather Info",
       title: "Personal-Weather-Information",
       description:
         "Displays current weather using OpenWeather API based on city input.",
-    },
-    {
-      link: "https://github.com/joshcord99/Joshua-Cordial-The-Programmer",
-      img: "/AvatarMaker-2.png",
-      alt: "Portfolio Website",
-      title: "Joshua-Cordial-The-Programmer",
-      description:
-        "Personal portfolio site showcasing skills, projects, and contact info.",
-    },
-    {
-      link: "https://github.com/anthonymoon2/TomoPudgy",
-      img: "/tamapudgy.png",
-      alt: "TamaPudgy",
-      title: "TamaPudgy",
-      description:
-        "Collaborated on a full-stack game that simulates pet-raising mechanics.",
-    },
-    {
-      link: "https://github.com/joshcord99/Talker",
-      img: "/projects/zen.jpg",
-      alt: "Talker AI Therapist",
-      title: "Talker - AI Therapist",
-      description:
-        "An AI-driven chatbot built for stress relief and mental health journaling.",
-    },
-    {
-      link: "https://github.com/joshcord99/stoxai",
-      img: "/projects/stoxai.png",
-      alt: "Market Analysis",
-      title: "StoxAI - Stock Market Analysis",
-      description:
-        "A stock market analysis tool that uses the algorythms to analyze stock market data and provide insights.",
     },
   ];
 
