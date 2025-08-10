@@ -68,6 +68,14 @@ export default function Portfolio() {
       description:
         "An AI-driven chatbot built for stress relief and mental health journaling.",
     },
+    {
+      link: "https://github.com/joshcord99/stoxai",
+      img: "/stoxai.png",
+      alt: "Market Analysis",
+      title: "StoxAI - Stock Market Analysis",
+      description:
+        "A stock market analysis tool that uses the algorythms to analyze stock market data and provide insights.",
+    },
   ];
 
   return (
