@@ -1,6 +1,6 @@
 const resumeData = {
   summary:
-    "Detail-oriented and versatile professional with hands-on experience in web development, logistics operations, and technical troubleshooting. Skilled in modern full-stack technologies including React, Node.js, and MongoDB. Strong communicator with a proven ability to support team workflows and solve real-world problems in fast-paced environments. Background includes training in both technical and administrative disciplines, with strengths in digital literacy, documentation, and attention to detail. Currently pursuing a degree in Computer Science with a focus on full-stack development.",
+    "Hi, my name is Joshua Cordial. I'm seeking a role where I can help shape the bright future of technology and proudly say I played a part in building it. I'm driven by a passion for innovation and enjoy collaborating with like-minded individuals to create an automated, sustainable, and advanced society for future generations. I'm always striving to push the boundaries of what's possible—because the possibilities with technology is truly endless.",
   technicalSkills: {
     languages: "JavaScript, TypeScript, HTML, CSS, Python, C++, PHP",
     frameworksLibraries: "Node.js, Express.js, React, Tailwind CSS",

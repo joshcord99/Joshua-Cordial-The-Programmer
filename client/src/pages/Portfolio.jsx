@@ -44,6 +44,14 @@ export default function Portfolio() {
         "C# CLI application that creates employee badges using SkiaSharp for image generation and API integration.",
     },
     {
+      link: "https://github.com/joshcord99/Find-A-Programmer",
+      img: "/err404.jpg",
+      alt: "Find-A-Programmer",
+      title: "Find-A-Programmer",
+      description:
+        "Front-end web application built with React and TypeScript that connects to GitHub API for candidate search and profile viewing.",
+    },
+    {
       link: "https://github.com/joshcord99/Personal-README-Generator",
       img: "/projects/PersonalReadMeProject.png",
       alt: "Personal README Generator",

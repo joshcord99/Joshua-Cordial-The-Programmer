@@ -32,36 +32,7 @@ export default function Resume() {
 
           {/* PROJECTS */}
           <h2 className="resumeHead text-center">PROJECTS</h2>
-          <ul>
-            {resumeData.projects.map((project, index) => (
-              <li key={index} className="resumeText">
-                <strong>{project.name}</strong> —{" "}
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live
-                </a>{" "}
-                |{" "}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-                <br />
-                {project.description}
-                <br />
-                Role: {project.role}
-                <br />
-                Skills: {project.skills}
-                <br />
-                Tools: {project.tools}
-              </li>
-            ))}
-          </ul>
+          <p className="resumeText text-center">Please see project page</p>
 
           {/* EXPERIENCE */}
           <h2 className="resumeHead text-center">EXPERIENCE</h2>
