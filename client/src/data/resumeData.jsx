@@ -5,7 +5,8 @@ const resumeData = {
     languages: "JavaScript, TypeScript, HTML, CSS, Python, C++, PHP",
     frameworksLibraries: "Node.js, Express.js, React, Tailwind CSS",
     backendTechnologies: "MongoDB, MySQL, Firebase, PostgreSQL",
-    toolsPlatforms: "GitHub, VS Code, Postman, Microsoft Office Suite",
+    toolsPlatforms:
+      "GitHub, VS Code, Postman, Microsoft Office Suite, Vertex AI, Cursor, ChatGPT, Gemini, GitHub Copilot, Hugging Face",
   },
   projects: [
     {
